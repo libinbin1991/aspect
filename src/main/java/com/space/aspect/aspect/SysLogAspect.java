@@ -28,9 +28,6 @@ import java.util.List;
 @Component
 public class SysLogAspect {
 
-    @Autowired
-    private SysLogService sysLogService;
-
     /**
      * 这里我们使用注解的形式
      * 当然，我们也可以通过切点表达式直接指定需要拦截的package,需要拦截的class 以及 method
@@ -87,7 +84,9 @@ public class SysLogAspect {
                 list.add(new Gson().toJson(o));
             }
             sysLogBO.setParams(list.toString());
+
+            System.out.println("环绕通知："+sysLogBO.toString());
         }catch (Exception e){ }
-        sysLogService.save(sysLogBO);
+
     }
 }

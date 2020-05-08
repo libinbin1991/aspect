@@ -1,23 +1,17 @@
 package com.space.aspect.service;
 
-import com.space.aspect.bo.SysLogBO;
-import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
 /**
- * @author zhuzhe
- * @date 2018/6/4 9:41
- * @email 1529949535@qq.com
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2016</p>
+ * <p>Company: Sunshine Insurance Group Co., Ltd.</p>
+ *
+ * @author lbb
+ * @version 1.0
+ * 修改记录：
+ * 修改序号，修改日期，修改人，修改内容
  */
-@Slf4j
-@Service
-public class SysLogService {
-    private static final Logger logger = LoggerFactory.getLogger(SysLogService.class);
-    public boolean save(SysLogBO sysLogBO){
-        // 这里就不做具体实现了
-        logger.info(sysLogBO.getParams());
-        return true;
-    }
+public interface SysLogService {
+
+    public String doWork(String name);
 }
